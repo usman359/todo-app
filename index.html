@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <nav class="nav-bar">
+        <button type="button" class="nav-link active" data-page="home">Home</button>
+        <button type="button" class="nav-link" data-page="about">About</button>
+        <button type="button" id="theme-toggle" class="theme-toggle">
+          Dark Mode
+        </button>
+      </nav>
+
+      <section id="page-home" class="page">
+        <header class="app-header">
+          <h1>My To-Do List</h1>
+          <p class="subtitle">Stay on top of your day</p>
+        </header>
+
+        <div class="add-task">
+          <input
+            type="text"
+            id="task-input"
+            placeholder="What do you need to do?"
+            autocomplete="off"
+          />
+          <div class="add-task-row">
+            <select id="category-select">
+              <option value="work">Work</option>
+              <option value="personal">Personal</option>
+              <option value="study">Study</option>
+            </select>
+            <button type="button" id="add-btn">Add Task</button>
+          </div>
+        </div>
+
+        <ul id="task-list" class="task-list"></ul>
+      </section>
+
+      <section id="page-about" class="page hidden">
+        <header class="app-header">
+          <h1>About This App</h1>
+        </header>
+
+        <div class="about-content">
+          <p>
+            This is a simple, beginner-friendly to-do app built with plain
+            HTML, CSS, and JavaScript — no frameworks or build tools needed.
+          </p>
+
+          <h2>Features</h2>
+          <ul>
+            <li>Add tasks with a single click or press Enter</li>
+            <li>Organize tasks by category — Work, Personal, or Study</li>
+            <li>Mark tasks as complete or delete them</li>
+            <li>Toggle between Light and Dark mode</li>
+            <li>Tasks saved automatically in your browser</li>
+          </ul>
+
+          <h2>How It Works</h2>
+          <p>
+            Tasks are saved in your browser using localStorage, so they stay
+            after you refresh the page. The app uses plain JavaScript — no
+            database or server required.
+          </p>
+
+          <p class="about-footer">
+            Made as a learning project. Feel free to explore the code!
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
